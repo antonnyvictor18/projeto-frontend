@@ -82,9 +82,14 @@ const AppMenu = () => {
                     ]
                 },
                 {
-                    label: 'Usuários',
+                    label: 'Usuario',
                     icon: 'pi pi-fw pi-pencil',
                     to: '/pages/usuario'
+                },
+                {
+                    label: 'Recurso',
+                    icon: 'pi pi-fw pi-pencil',
+                    to: '/pages/recurso'
                 },
                 {
                     label: 'Timeline',
