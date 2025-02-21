@@ -97,6 +97,11 @@ const AppMenu = () => {
                     to: '/pages/perfil'
                 },
                 {
+                    label: 'Perfil de Usuario',
+                    icon: 'pi pi-fw pi-pencil',
+                    to: '/pages/perfil-usuario'
+                },
+                {
                     label: 'Timeline',
                     icon: 'pi pi-fw pi-calendar',
                     to: '/pages/timeline'
