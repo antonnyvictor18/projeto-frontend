@@ -102,6 +102,11 @@ const AppMenu = () => {
                     to: '/pages/perfil-usuario'
                 },
                 {
+                    label: 'Permissão de Perfil de Recurso',
+                    icon: 'pi pi-fw pi-pencil',
+                    to: '/pages/permissao-perfil-recurso'
+                },
+                {
                     label: 'Timeline',
                     icon: 'pi pi-fw pi-calendar',
                     to: '/pages/timeline'
