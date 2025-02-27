@@ -33,8 +33,10 @@ const LoginPage = () => {
             setLogin('');
             setSenha('');
 
-            localStorage.setItem('token', response.data.token);
+            localStorage.setItem('TOKEN_APLICACAO_FRONTEND', response.data.token);
+
             router.push('/');
+            window.location.reload();
         }).catch((error) => {
             toast.current?.show({
                 severity: 'error',

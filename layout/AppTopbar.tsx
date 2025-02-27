@@ -18,6 +18,11 @@ const AppTopbar = forwardRef<AppTopbarRef>((props, ref) => {
         topbarmenubutton: topbarmenubuttonRef.current
     }));
 
+    const Logout = () => {
+        localStorage.removeItem('TOKEN_APLICACAO_FRONTEND');
+        window.location.href = '/';
+    }
+
     return (
         <div className="layout-topbar">
             <Link href="/" className="layout-topbar-logo">
@@ -46,6 +51,12 @@ const AppTopbar = forwardRef<AppTopbarRef>((props, ref) => {
                     <button type="button" className="p-link layout-topbar-button">
                         <i className="pi pi-cog"></i>
                         <span>Settings</span>
+                    </button>
+                </Link>
+                <Link href="/" onClick={() => Logout()}>
+                    <button type="button" className="p-link layout-topbar-button">
+                        <i className="pi pi-sign-out"></i>
+                        <span>Sair</span>
                     </button>
                 </Link>
             </div>

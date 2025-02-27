@@ -10,7 +10,34 @@ export class BaseService {
 
     constructor(url: string){
         this.url = url;
+
+        axiosInstance.interceptors.request.use(
+            (config) => {
+                const token = localStorage.getItem('TOKEN_APLICACAO_FRONTEND');
+                if(token){
+                    config.headers.Authorization = `Bearer ${token}`;
+                }
+                return config;
+            },
+            (error) => {
+                return Promise.reject(error);
+            }
+        );
+
+        axiosInstance.interceptors.response.use(
+            (response) => {
+                return response;
+            },
+            (error) => {
+                if(error.response.status === 401){
+                    localStorage.removeItem('TOKEN_APLICACAO_FRONTEND');
+                    window.location.href = '/auth/login';
+                }
+                return Promise.reject(error);
+            }
+        );
     }
+
 
     listarTodos() {
         return axiosInstance.get(this.url);

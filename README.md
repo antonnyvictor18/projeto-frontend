@@ -1,24 +1,89 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Projeto Front-end com Next.js
 
-## Getting Started
+## 📌 Descrição
 
-First, run the development server:
+Este projeto é um front-end desenvolvido em **Next.js** e **TypeScript**, utilizando **PrimeReact** para a interface de usuário e **Chart.js** para visualização de dados. Também conta com **Axios** para requisições HTTP.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Tecnologias Utilizadas
+
+- **Next.js** - Framework React para aplicações web
+- **React & React-DOM** - Biblioteca base
+- **TypeScript** - Tipagem estática para melhor desenvolvimento
+- **Axios** - Cliente HTTP para consumo de APIs
+- **PrimeReact, PrimeIcons, PrimeFlex** - Componentes UI
+- **Chart.js** - Biblioteca para criação de gráficos
+- **SASS** - Estilização CSS aprimorada
+
+## 📂 Estrutura do Projeto
+
+```
+projeto-front/
+│── app/                      # Páginas e componentes
+│   ├── (full-page)/          # Páginas de tela cheia
+│   │   ├── auth/             # Autenticação (login, erro, novo usuário, etc.)
+│   │   ├── landing/          # Página inicial
+│   ├── layout.tsx            # Layout principal do projeto
+│── public/                   # Arquivos estáticos
+│── styles/                   # Arquivos de estilo SASS/CSS
+│── package.json              # Dependências do projeto
+│── tsconfig.json             # Configuração do TypeScript
+│── .eslintrc.json            # Configuração do ESLint
+│── .prettierrc.json          # Configuração do Prettier
+│── next-env.d.ts             # Tipagem global para Next.js
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎯 Como Executar o Projeto
 
-## Learn More
+### 1️⃣ Instalar Dependências
 
-To learn more about Next.js, take a look at the following resources:
+```sh
+npm install
+```
 
--   [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
--   [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 2️⃣ Rodar o Ambiente de Desenvolvimento
+
+```sh
+npm run dev
+```
+
+A aplicação ficará disponível em [**http://localhost:3000**](http://localhost:3000).
+
+### 3️⃣ Construir o Projeto para Produção
+
+```sh
+npm run build
+```
+
+### 4️⃣ Executar a Versão de Produção
+
+```sh
+npm run start
+```
+
+## 📜 Scripts Disponíveis
+
+- `npm run dev` → Inicia o projeto em modo de desenvolvimento
+- `npm run build` → Faz o build da aplicação para produção
+- `npm run start` → Inicia o servidor em produção
+- `npm run format` → Formata os arquivos com Prettier
+- `npm run lint` → Verifica o código com ESLint
+
+## ⚙️ Configuração do Ambiente
+
+Este projeto segue padrões de qualidade de código utilizando **ESLint** e **Prettier**.
+
+Caso precise verificar erros de linting ou formatar o código, use os comandos:
+
+```sh
+npm run lint  # Verifica erros de linting
+npm run format  # Formata o código automaticamente
+```
+
+## 📄 Licença
+
+Este projeto está licenciado sob os termos do arquivo **LICENSE.md**.
+
+## ✨ Autor
+
+Desenvolvido por Antonny Victor da Silva 🚀
+
